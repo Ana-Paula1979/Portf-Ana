@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font: "Raleway", sans-serif;
+    --font-color: #464646;
+    --bg-color-primaria: #F5F5F5;
+    --bg-color-secundaria: #EAF2FD;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color-primaria);
+    font-family: var(--font);
+    color: var(--font-color);
+}
+
+section {
+    padding: 32px 152px 0 152px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*menu */
+
+.menu {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__nome {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu__nav__links {
+    display: flex;
+    gap: 32px;
+}
+
+.apresentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apresentacao__links {
+    display: flex;
+    gap: 32px;
+}
+
+.apresentacao__links img {
+    margin-left: 5px;
+}
+
+
+.apresentacao__textos__titulo {
+    font-size: 55px;
+    font-color: #b41653;
+}
+
+.apresentacao__textos__paragrafo {
+    margin: 24px 0 24px 0;
+    font-size: 25px;
+    width: 90%;
+}
+
+.apresentacao__foto {
+    border-radius: 50%;
+    width: 368px;
+    height: 368px;
+}
+
+.sobre {
+    margin-top: 2%;
+    padding: 32px 152px 32px 152px;
+    background-color: var(--bg-color-secundaria);
+}
+
+
+.sobre img {
+    margin-top: 1%;
+}
+
+.sobre__text h2 {
+    font-size: 2rem;
+}
+
+.sobre__text p {
+    margin-top: 1%;
+}
+
+.skills__titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+}
+
+.skills {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.skills__HTML {
+    padding: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+
+.skills__HTML img {
+    order: 1;
+    width: 24px;
+    height: 28px;
+}
+
+.skills__JS {
+    padding: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+
+.skills__JS img {
+    order: 1;
+    width: 28px;
+    height: 28px;
+}
+
+
+.skills__react {
+    padding: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+
+.skills__react img {
+    order: 1;
+    width: 32px;
+    height: 30px;
+}
+
+.skills__css {
+    padding: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+
+.skills__css img {
+    order: 1;
+    width: 22px;
+    height: 36px;
+}
+
+.container-hobbies {
+    padding-bottom: 88px;
+}
+
+.hobbies_titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+}
+
+.hobbies {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+.hobbies__musica {
+    padding: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+
+.hobbies__musica img {
+    order: 1;
+    width: 25%;
+    height: 25%;
+}
+
+
+.hobbies__series {
+    padding: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+
+.hobbies__series img {
+    order: 1;
+    width: 25%;
+    height: 25%;
+}
+
+.hobbies__cozinhar {
+    padding: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+
+.hobbies__cozinhar img {
+    order: 1;
+    width: 25%;
+    height: 25%;
+}
+
+.container-formacao {
+    padding-bottom: 32px;
+    background-color: var(--bg-color-secundaria);
+}
+
+.formacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.formacao_titulo {
+    margin-top: 82px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+}
+
+.formacao__uninove, 
+.formacao__alura {
+    position: relative;
+} 
+
+.formacao__uninove__foto,
+.formacao__alura__foto {
+    width: 368px;
+    height: 286px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+#logoUninove,
+#logoAlura {
+    width: 80%;
+    height: 80%;
+}
+
+.formação__uninove__texto,
+.formacao__alura__texto {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 5px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container-exp {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.exp__titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    font-size: 22px;
+}
+
+.formulario {
+    margin-top: 32px;
+    padding-top: 128px;
+    padding-bottom: 65px;
+    display: flex;
+    background-color: var(--bg-color-secundaria);
+    gap: 16px;
+}
+
+.formulario__texto h3 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.formulario__texto p {
+    font-weight: 500;
+}
+
+form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+.formulario__nome {
+    background-color: white;
+    padding: 7px 12px;
+    box-shadow: 0px 1px 1px grey;
+    border-radius: 5px;
+}
+
+.erro {
+    color: rgba(214, 71, 46, 0.884);
+    font-size: 12px;
+    display: none;
+}
+
+.formulario__nome input {
+    margin-top: 4px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    color: #999;
+}
+
+.label-active {
+    color: #2A7AE4;
+}
+
+input {
+    width: 100%;
+    font-family: var(--font);
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+textarea {
+    font-family: var(--font);
+    font-size: 16px;
+    resize: none;
+    width: 100%;
+    height: 156px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px grey;
+}
+
+
+
+.formulario__email {
+    background-color: white;
+    padding: 7px 12px;
+    box-shadow: 0px 1px 1px grey;
+    border-radius: 3px;
+}
+
+#assunto {
+    padding: 16px 12px;
+    box-shadow: 0px 1px 1px grey;
+}
+
+.formulario__email input {
+    margin-top: 4px;
+}
+
+.botaoForm {
+    background-color: #2A7AE4;
+    padding: 1rem;
+    font-family: var(--font);
+    color: white;
+    border: none;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+.botaoForm:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.botaoForm:not(:disabled):hover {
+    background-color: #5595E9;
+    transition: 0, 2s;
+}
+
+#mensagemEnviada {
+    color: green;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.rodape {
+    padding: 1% 0px 1% 0px;
+    position: relative;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+
+    #port {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* .menu {
+        margin: 0 0 16px 0;
+        align-items: center;
+    }
+
+    .menu__nav__links strong {
+        font-size: 14px;
+    }
+
+    #sobreMim-media,
+    #skills-media,
+    #hobbies-media,
+    #formacao-media {
+        display: none;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .apresentacao__foto {
+        width: 98px;
+        height: 98px;
+    }
+
+    .apresentacao__textos__titulo {
+        font-size: 20px;
+    }
+
+    .apresentacao__textos__paragrafo {
+        font-size: 14px;
+        margin: 16px 0 16px 0;
+    }
+
+    .apresentacao__links {
+        margin-bottom: 16px;
+    }
+
+    .apresentacao__links a {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .seta {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* SOBRE MIM */
+
+    /* .sobre {
+        padding: 16px 16px 0 16px;
+    }
+
+    .sobre img {
+        margin-top: 3%;
+    }
+
+    .sobre__text h2 {
+        font-size: 22px;
+    }
+
+    .sobre__text p {
+        font-size: 14px;
+        margin-top: 2%;
+    }
+
+    /*Skills*/
+
+    /* .skills__titulo {
+        font-size: 22px;
+    }
+
+    .skills {
+        flex-wrap: wrap;
+    }
+
+    .skills__HTML,
+    .skills__JS,
+    .skills__react,
+    .skills__css {
+        width: 156px;
+        height: 118px;
+    }
+
+
+    /* Hobbies */
+
+    /* .container-hobbies {
+        padding-bottom: 20px;
+    }
+
+    .hobbies_titulo {
+        font-size: 22px;
+    }
+
+    .hobbies {
+        flex-wrap: wrap;
+    }
+
+
+    .hobbies__musica,
+    .hobbies__series,
+    .hobbies__cozinhar,
+    width: 156px;
+    height: 118px;
+}
+
+.hobbies__musica img,
+.hobbies__series img,
+.hobbies__cozinhar img {
+    height: 35%;
+}
+
+section {
+    padding: 16px 16px 0 16px;
+}
+
+/* FORMAÇÃO */
+
+    /*.container-formacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formacao {
+    flex-direction: column;
+}
+
+.formacao_titulo {
+    margin-top: 20px;
+    font-size: 1.375rem;
+}
+
+
+.formacao__uninove__foto,
+.formacao__alura__foto {
+    padding: 50px;
+    width: 100%;
+    height: 50%;
+}
+
+.formação__uninove__texto h4,
+.formacao__alura__texto h4 {
+    font-size: 1rem;
+}
+
+.formação__uninove__texto p,
+.formacao__alura__texto p {
+    font-size: 0.875rem;
+}
+
+/* FORMULÁRIO */
+
+    /*#telefone {
+    display: none;
+}
+
+.formulario {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 0;
+}
+
+.formulario__texto h3 {
+    font-size: 1.375rem;
+}
+
+.formulario__texto p {
+    font-size: 1rem;
+}
+
+.botaoForm {
+    margin-top: 32px;
+}
+
+/* RODAPÉ */
+
+    /*.rodape {
+    padding: 5% 0px 5% 0px;
+    background-color: white;
+}
