@@ -1,3 +1,4 @@
+![meu portifolio alura](https://github.com/Ana-Paula1979/Portf-Ana/assets/129860125/7c8e50ce-9d72-4f5d-a8cf-955113440bb8)
 # Challenge ONE | Front End - Portfólio
 ---
 
