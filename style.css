@@ -1,8 +1,17 @@
+/* Reset de estilos e configurações gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de variáveis globais */
 :root {
-    --font-size-title: 55px;
-    --font-size-paragraph: 25px;
+    --font: "Raleway", sans-serif;
+    --font-color: #464646;
+    --bg-color-primaria: #F5F5F5;
+    --bg-color-secundaria: #EAF2FD;
     --padding-section: 32px 152px 0 152px;
-    --margin-menu-bottom: 70px;
     --gap-menu-links: 32px;
     --gap-apresentacao-links: 32px;
     --width-skill-box: 176px;
@@ -10,258 +19,305 @@
     --padding-skill-box: 0 0 16px 16px;
 }
 
-.skills__HTML,
-.skills__JS,
-.skills__react,
-.skills__css {
-    padding: var(--padding-skill-box);
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 8px;
-    width: var(--width-skill-box);
-    height: var(--height-skill-box);
-    background-color: white;
-}
-
-.flex-column-reverse {
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.box-size {
-    width: var(--width-skill-box);
-    height: var(--height-skill-box);
-}
-
-.box-padding {
-    padding: var(--padding-skill-box);
-}
-
-.skills__HTML,
-.skills__JS,
-.skills__react,
-.skills__css {
-    @extend .flex-column-reverse, .box-size, .box-padding;
-    background-color: white;
-}
-
-/* Seção: Geral */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root {
-    --font: "Raleway", sans-serif;
-    --font-color: #464646;
-    --bg-color-primaria: #F5F5F5;
-    --bg-color-secundaria: #EAF2FD;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos para o corpo e layout geral */
 body {
     background-color: var(--bg-color-primaria);
     font-family: var(--font);
     color: var(--font-color);
+    margin: 0;
+    padding: 0;
 }
 
-/* Seção: Layout */
-section {
-    padding: var(--padding-section);
-}
-
-a {
-    text-decoration: none;
-    color: var(--font-color);
-    font-size: 16px;
-}
-
-ul {
-    list-style
-    /* .menu {
-        margin: 0 0 16px 0;
-        align-items: center;
-    }
-
-    .menu__nav__links strong {
-        font-size: 14px;
-    }
-
-    #sobreMim-media,
-    #skills-media,
-    #hobbies-media,
-    #formacao-media {
-        display: none;
-    }
-
-    .apresentacao {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: 16px;
-    }
-
-    .apresentacao__foto {
-        width: 98px;
-        height: 98px;
-    }
-
-    .apresentacao__textos__titulo {
-        font-size: 20px;
-    }
-
-    .apresentacao__textos__paragrafo {
-        font-size: 14px;
-        margin: 16px 0 16px 0;
-    }
-
-    .apresentacao__links {
-        margin-bottom: 16px;
-    }
-
-    .apresentacao__links a {
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .seta {
-        width: 10px;
-        height: 10px;
-    }
-
-    /* SOBRE MIM */
-
-    /* .sobre {
-        padding: 16px 16px 0 16px;
-    }
-
-    .sobre img {
-        margin-top: 3%;
-    }
-
-    .sobre__text h2 {
-        font-size: 22px;
-    }
-
-    .sobre__text p {
-        font-size: 14px;
-        margin-top: 2%;
-    }
-
-    /*Skills*/
-
-    /* .skills__titulo {
-        font-size: 22px;
-    }
-
-    .skills {
-        flex-wrap: wrap;
-    }
-
-    .skills__HTML,
-    .skills__JS,
-    .skills__react,
-    .skills__css {
-        width: 156px;
-        height: 118px;
-    }
-
-
-    /* Hobbies */
-
-    /* .container-hobbies {
-        padding-bottom: 20px;
-    }
-
-    .hobbies_titulo {
-        font-size: 22px;
-    }
-
-    .hobbies {
-        flex-wrap: wrap;
-    }
-
-
-    .hobbies__musica,
-    .hobbies__series,
-    .hobbies__cozinhar,
-    width: 156px;
-    height: 118px;
-}
-
-.hobbies__musica img,
-.hobbies__series img,
-.hobbies__cozinhar img {
-    height: 35%;
-}
-
-section {
-    padding: 16px 16px 0 16px;
-}
-
-/* FORMAÇÃO */
-
-    /*.container-formacao {
+/* Estilos para o cabeçalho (menu) */
+.menu {
+    background-color: var(--bg-color-secundaria);
+    padding: 16px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
+.menu__nome {
+    display: flex;
+    align-items: center;
+}
+
+.menu__nome img {
+    width: 40px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.menu__nome p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu__nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.menu__nav__links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__nav__links__lista {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.menu__nav__links__lista a {
+    color: var(--font-color);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Estilos para a seção de Apresentação */
+.apresentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 152px;
+}
+
+.apresentacao__textos {
+    max-width: 50%;
+}
+
+.apresentacao__textos__titulo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.apresentacao__textos__paragrafo {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.apresentacao__links {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.apresentacao__links li {
+    display: flex;
+    align-items: center;
+}
+
+.apresentacao__links li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.apresentacao__foto {
+    width: 40%;
+    height: auto;
+}
+
+/* Estilos para as seções de Skills e Hobbies */
+.container,
+.container-hobbies {
+    padding: 64px 152px;
+    text-align: center;
+}
+
+.skills,
+.hobbies {
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.skills__HTML,
+.skills__JS,
+.skills__react,
+.skills__css,
+.hobbies__series,
+.hobbies__musica,
+.hobbies__cozinhar {
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 200px;
+}
+
+.skills__HTML img,
+.skills__JS img,
+.skills__react img,
+.skills__css img,
+.hobbies__series img,
+.hobbies__musica img,
+.hobbies__cozinhar img {
+    width: 80px;
+    height: auto;
+}
+
+.skills__HTML p,
+.skills__JS p,
+.skills__react p,
+.skills__css p,
+.hobbies__series p,
+.hobbies__musica p,
+.hobbies__cozinhar p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos para a seção de Sobre Mim */
+.sobre {
+    padding: 10px 10px;
+    text-align: center;
+    /* Centraliza o texto dentro da div */
+    max-width: 1000px;
+    /* Aumenta a largura máxima da seção */
+    margin: 0 auto 32px auto;
+
+    /* Centraliza a div horizontalmente */
+}
+
+/* Estilos para a seção de Formação Acadêmica */
+.container-formacao {
+    padding: 64px 152px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .formacao {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.formacao__item {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.formacao__uninove,
+.formacao__alura {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
-.formacao_titulo {
-    margin-top: 20px;
-    font-size: 1.375rem;
+.formacao__uninove img,
+.formacao__alura img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
-
 
 .formacao__uninove__foto,
 .formacao__alura__foto {
-    padding: 50px;
-    width: 100%;
-    height: 50%;
+    justify-content: center;
+    margin-bottom: 8px;
 }
 
-.formação__uninove__texto h4,
-.formacao__alura__texto h4 {
-    font-size: 1rem;
+.formacao__uninove__texto,
+.formacao__alura__texto {
+    text-align: center;
 }
 
-.formação__uninove__texto p,
-.formacao__alura__texto p {
-    font-size: 0.875rem;
+.formacao__uninove h4,
+.formacao__alura h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-/* FORMULÁRIO */
-
-    /*#telefone {
-    display: none;
+.formacao__uninove p,
+.formacao__alura p {
+    font-size: 16px;
 }
 
+/* Estilos para a seção de Contato */
 .formulario {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    gap: 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 64px 152px;
+}
+
+.container-contato {
+    max-width: 50%;
 }
 
 .formulario__texto h3 {
-    font-size: 1.375rem;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
 
 .formulario__texto p {
-    font-size: 1rem;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.formulario__nome,
+.formulario__email,
+.formulario__assunto,
+.formulario__mensagem {
+    margin-bottom: 16px;
+}
+
+.formulario__nome input,
+.formulario__email input,
+.formulario__assunto input,
+.formulario__mensagem textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario__nome label,
+.formulario__email label,
+.formulario__assunto label,
+.formulario__mensagem label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
 }
 
 .botaoForm {
-    margin-top: 32px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-/* RODAPÉ */
+.botaoForm:hover {
+    background-color: #0056b3;
+}
 
-    /*.rodape {
-    padding: 5% 0px 5% 0px;
-    background-color: white;
+#mensagemEnviada {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    display: none;
+}
+
+/* Estilos para o rodapé */
+.rodape {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 16px 0;
 }
